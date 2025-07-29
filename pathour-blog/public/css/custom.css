@@ -1,0 +1,136 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Container dan Grid */
+
+
+.search-box-group {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+  padding: 10px;
+  margin-top: -130px;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* Setiap input box */
+.search-box {
+  flex: 1 1 25%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 16px 20px;
+  font-size: 16px;
+  color: #777;
+  min-width: 220px; /* agar tidak terlalu kecil di grid wrap */
+  box-sizing: border-box;
+}
+
+/* Icon Font Awesome */
+.search-box i {
+  font-size: 18px;
+  color: #999;
+  flex-shrink: 0;
+}
+
+/* Input dan Select */
+.search-box input,
+.search-box select {
+  flex: 1;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #555;
+  background: transparent;
+  padding: 5px 0;
+  width: 100%;
+}
+
+/* Tombol Submit */
+.search-box.submit {
+  padding: 0;
+}
+.search-box.submit button {
+  width: 100%;
+  height: 100%;
+  padding: 16px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+
+.navbar{
+  background: #449984 !important;
+}
+
+  .search-box-group {
+    flex-direction: column;
+    box-shadow: none;
+    border-radius: 0;
+
+    margin: 0 20px;
+    margin-top: -150px;
+
+  }
+
+  .search-box {
+    flex: 1 1 100%;
+    width: 100%;
+    padding: 14px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .search-box:last-child {
+    border-bottom: none;
+  }
+
+  .search-box.submit button {
+    font-size: 18px;
+    padding: 18px;
+    border-radius: 4px;
+  }
+}
+
+.spin-random {
+  animation: spinCompass 2s infinite;
+  transform-origin: center center;
+}
+
+@keyframes spinCompass {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(80deg); }
+  30%  { transform: rotate(30deg); }
+  45%  { transform: rotate(150deg); }
+  60%  { transform: rotate(100deg); }
+  75%  { transform: rotate(260deg); }
+  90%  { transform: rotate(200deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/*facebook*/
+#facebook-comments,
+#facebook-comments > .fb-comments,
+#facebook-comments iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
